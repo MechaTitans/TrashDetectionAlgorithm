@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+   
+      <Label layoutX="1139.0" layoutY="188.0" text="Hue Start" />
+      <Slider fx:id="hueStart" blockIncrement="1" layoutX="1101.0" layoutY="225.0" max="180" min="0" value="20" />
+      <Label layoutX="1139.0" layoutY="261.0" text="Hue Stop" />
+      <Slider fx:id="hueStop" blockIncrement="1" layoutX="1101.0" layoutY="301.0" max="180" min="0" value="50" />
+      <Label layoutX="1118.0" layoutY="339.0" text="Saturation Start" />
+      <Slider fx:id="saturationStart" blockIncrement="1" layoutX="1101.0" layoutY="382.0" max="255" min="0" value="60" />
+      <Label layoutX="1118.0" layoutY="440.0" text="Saturation Stop" />
+      <Slider fx:id="saturationStop" blockIncrement="1" layoutX="1099.0" layoutY="477.0" max="255" min="0" value="200" />
+      <Label layoutX="1135.0" layoutY="36.0" text="Value Start" />
+      <Slider fx:id="valueStart" blockIncrement="1" layoutX="1101.0" layoutY="69.0" max="255" min="0" value="50" />
+      <Label layoutX="1135.0" layoutY="114.0" text="Value Stop" />
+      <Slider fx:id="valueStop" blockIncrement="1" layoutX="1101.0" layoutY="149.0" max="255" min="0" value="255" />
+      <HBox alignment="CENTER" layoutX="55.0" layoutY="37.0" prefHeight="604.0" prefWidth="960.0" spacing="5">
+         <padding>
+            <Insets left="10" right="10" />
+         </padding>
+         <children>
+            <ImageView fx:id="originalFrame" fitHeight="445.0" fitWidth="552.0" />
+            <VBox alignment="CENTER" prefHeight="363.0" prefWidth="621.0" spacing="5">
+               <children>
+                  <ImageView fx:id="maskImage" fitHeight="228.0" fitWidth="371.0" />
+                  <ImageView fx:id="morphImage" fitHeight="229.0" fitWidth="356.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button fx:id="cameraButton" alignment="center" layoutX="529.0" layoutY="696.0" onAction="#startCamera" prefHeight="60.0" prefWidth="173.0" text="Start camera" />
+      <Separator />
+      <Label fx:id="hsvCurrentValues" />
+   </children>
+</Pane>
